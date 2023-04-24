@@ -25,7 +25,8 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public	void	handleMessage(Message msg)	{
                 Log.d(MainActivity.class.getSimpleName(),	"Task	execute.	This	is	result:	"
-                        +	msg.getData().getString("result"));
+                        +	msg.getData().getString("letter count"));
+                Log.d(MainActivity.class.getSimpleName(), "Task execute. This is result: " + msg.getData().getString("message"));
             }
         };
         MyLooper	myLooper	=	new	MyLooper(mainThreadHandler);
@@ -38,6 +39,10 @@ public class MainActivity extends AppCompatActivity {
                 Message	msg	=	Message.obtain();
                 Bundle	bundle	=	new	Bundle();
                 bundle.putString("KEY",	"abrakadabra");
+                String job = binding.editTextWork.getText().toString();
+                int age = Integer.parseInt(binding.editTextAge.getText().toString());
+                bundle.putString("JOB", job);
+                bundle.putInt("AGE", age);
                 msg.setData(bundle);
                 myLooper.mHandler.sendMessage(msg);
             }
