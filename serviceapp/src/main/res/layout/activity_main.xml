@@ -45,6 +45,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/png_transparent_question_mark_nemiga_gaming_computer_icons_questions_angle_text_poster" />
+        app:srcCompat="@drawable/__d______106886196" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
